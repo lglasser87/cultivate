@@ -7,6 +7,12 @@ https://cultivate-2020.herokuapp.com/
 * For: people who want to grow their own garden/ farm
 * What it does: allows people to independently and effectively grow food instead of relying on external sources for nourishment
 * Why: to prevent famine and panic during crises such as a pandemic as well as to inform people how to provide their own sustenance
+## Built With
+* JavaScript
+* Mongoose
+* Express
+* React
+* Node
 ## CSS Framework
 * Bootstrap
 ## APIs to be used
