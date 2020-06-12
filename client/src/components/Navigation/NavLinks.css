@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+img {
+    height: 20px;
+    width: 20px;
+}
+
+#navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+
+#basic-navbar-nav {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+}
