@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron"
 import { List, ListItem } from "../components/List"
 
 function Dashboard() {
-    const weather = [
+    const weatherDat = [
         {
             id: "TW1",
             type: "Sunny",
@@ -27,7 +28,7 @@ function Dashboard() {
         }
     ]
 
-    const blogs = [
+    const blogsDat = [
         {
             id: "TB1",
             title: "Test1",
@@ -51,6 +52,18 @@ function Dashboard() {
         }
     ]
 
+    useEffect(() => {
+        loadWeather();
+    }, []);
+
+    function loadWeather() {
+        API.getWeather()
+            .then(res =>
+                    console.log(res)
+            )
+            .catch(err => console.log(err));
+    };
+
     return (
         <Container>
             <Row>
@@ -62,7 +75,7 @@ function Dashboard() {
             </Row>
             <Col size="sm-6">
                 <List>
-                    {weather.map(day => (
+                    {weatherDat.map(day => (
                         <ListItem key={day.id}>
                             <strong>
                                 {day.date}
@@ -76,7 +89,7 @@ function Dashboard() {
             <Col size="sm-6">
                 <h1>Latest Blog Posts</h1>
                 <List>
-                    {blogs.map(blog => (
+                    {blogsDat.map(blog => (
                         <ListItem key={blog.id}>
                             <Link to="/blogdetails">
                                 <strong>
