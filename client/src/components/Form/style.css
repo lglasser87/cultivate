@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+
+#input, #text-area, #form-btn{
+    display: block;
+    text-align: center;
+    margin: 0 auto
+}
+
+#input {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    padding: 10px;
+    margin:10px;
+}
+
+#form-btn {
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    padding: 10px;
+    margin:10px;
+}

@@ -1,13 +1,13 @@
 import React from "react";
 
 import { Container, Row, Col } from "../components/Grid"
-import { Input, TextArea, FormBtn} from "../components/Form";
+import { Input, FormBtn} from "../components/Form";
 
 function Authentication() {
     return (
     <Container fluid>
         <Row>
-            <Col size="md-12">
+            <Col size="md-4">
                 <form>
                 <Input
                     name="userName"
