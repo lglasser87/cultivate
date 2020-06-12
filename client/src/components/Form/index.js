@@ -1,5 +1,5 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 // This file exports the Input, TextArea, and FormBtn components
 
@@ -23,6 +23,7 @@ export function FormBtn(props) {
   return (
     <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
       {props.children}
+      <FontAwesomeIcon icon={['fas', 'search']} />
     </button>
   );
 }
