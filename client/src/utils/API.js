@@ -1,17 +1,26 @@
 import axios from "axios";
 
 export default {
-    // Gets all
-
-    // Gets single
-
-    // Deletes
-
-    // Saves
-
     // Get weather
     getWeather: function () {
-        return axios.post("/api/dashboard/weather");
-    }
+        return axios.get("http://api.openweathermap.org/data/2.5/forecast?zip=91911,us&appid=" + process.env.REACT_APP_WEATHER_API_KEY);
+    },
 
+    //Blogs
+    // Gets all posts
+    getPosts: function () {
+        return axios.get("/api/blogs");
+    },
+    // Gets the post with the given id
+    getPost: function (id) {
+        return axios.get("/api/blogs/" + id);
+    },
+    // Deletes the post with the given id
+    deletePost: function (id) {
+        return axios.delete("/api/blogs/" + id);
+    },
+    // Saves a post to the database
+    savePost: function (postData) {
+        return axios.post("/api/blogs", postData);
+    }
 }
