@@ -25,10 +25,12 @@
   "homepage": "https://github.com/lglasser87/cultivate#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.18",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "react-bootstrap": "^1.0.1"
   }
 }
