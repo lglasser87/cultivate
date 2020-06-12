@@ -1,16 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./MainNav.css";
+// import { Link } from "react-router-dom";
 
 import MainHeader from "./MainHeader";
 import NavLinks from "./NavLinks"
 
 function MainNav(props) {
-    return <MainHeader>
-      <h1>
-        <Link to="/">
-          Cultivate
-        </Link>
-      </h1>
+    return <MainHeader id="main-header">
       <nav>
         <NavLinks />
       </nav>
