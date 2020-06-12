@@ -3,10 +3,14 @@ import Grid from "@material-ui/core/Grid";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./style.css";
 
-// This file exports the FormEl, Input, TextArea, and FormBtn components
+// This file exports the Form, Input, TextArea, and FormBtn components
 export function Form(props) {
   return (
-    <Grid className="center aligned">
+    <Grid 
+    alignContent="center"
+    alignItems="center"
+    justify="center"
+    >
       <div className="form-group" class="form">
         <form class="form" {...props}>
         </form>
