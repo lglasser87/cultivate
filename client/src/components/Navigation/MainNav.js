@@ -10,6 +10,7 @@ function MainNav(props) {
         <Link to="/">
           Cultivate
         </Link>
+        <img src={require('../Images/cultivate.png')} />
       </h1>
       <nav>
         <NavLinks />
