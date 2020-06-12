@@ -12,6 +12,7 @@ import Authentication from "./pages/Authentication";
 import SignUp from "./pages/SignUp";
 
 function App() {
+
   return (
     <Router>
       <div>
