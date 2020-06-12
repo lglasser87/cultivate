@@ -1,3 +1,4 @@
 module.exports = {
-    Weather: require("./weather")
+    Weather: require("./weather"),
+    Blog: require("./blog")
 }

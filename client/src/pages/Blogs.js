@@ -1,35 +1,59 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Jumbotron from "../components/Jumbotron"
+import DeleteBtn from "../components/DeleteBtn"
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import API from "../utils/API";
 
 function Blogs() {
-    const blogs = [
-        {
-            id: "TB1",
-            title: "Test1",
-            author: "Test1",
-            date: "Test1",
-            text: "Test1"
-        },
-        {
-            id: "TB2",
-            title: "Test2",
-            author: "Test2",
-            date: "Test2",
-            text: "Test2"
-        },
-        {
-            id: "TB3",
-            title: "Test3",
-            author: "Test3",
-            date: "Test3",
-            text: "Test3"
+    const [posts, setPosts] = useState([])
+    const [formObject, setFormObject] = useState({})
+
+    // Load all posts and store them with setPosts
+    useEffect(() => {
+        loadPosts()
+    }, [])
+
+    // Loads all posts and sets them to posts
+    function loadPosts() {
+        API.getPosts()
+            .then(res => 
+                setPosts(res.data)
+            )
+            .catch(err => console.log(err))
+    };
+
+    // Deletes a post from the database with a given id, then reloads the posts from the db
+    function deletePost(id) {
+        API.deletePost(id)
+        .then(res => loadPosts())
+        .catch(err => console.log(err));
+    }
+
+    // Handles updating component state when the user types into the input field
+    function handleInputChange(event) {
+        const { name, value } = event.target;
+        setFormObject({...formObject, [name]: value})
+    };
+
+    // When the form is submitted, use the API.savePost method to save the post data
+    // Then reload posts from the database
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        if (formObject.title && formObject.author) {
+            API.savePost({
+                title: formObject.title,
+                author: formObject.author,
+                body: formObject.body,
+                date: Date.now()
+            })
+            .then(res => loadPosts())
+            .catch(err => console.log(err));
         }
-    ]
+    }
 
     return (
         <Container fluid>
@@ -39,15 +63,25 @@ function Blogs() {
                         <h1>My Blogs</h1>
                     </Jumbotron>
                     <form>
-                        <Input 
+                        <Input
+                            onChange={handleInputChange} 
                             name="title"
                             placeholder="Title (required)"
                         />
+                        <Input
+                            onChange={handleInputChange} 
+                            name="author"
+                            placeholder="Author (required)"
+                        />
                         <TextArea
-                            name="blog"
+                            onChange={handleInputChange}
+                            name="body"
                             placeholder="Write here! (required)"
                         />
-                        <FormBtn>
+                        <FormBtn
+                            disabled={!(formObject.author && formObject.title)}
+                            onClick={handleFormSubmit}
+                        >
                             Post
                         </FormBtn>
                     </form>
@@ -56,21 +90,26 @@ function Blogs() {
             <Row>
             <Col size="med-12">
                 <h1>Latest Blog Posts</h1>
+                {posts.length ? (
                 <List>
-                    {blogs.map(blog => (
-                        <ListItem key={blog.id}>
-                            <Link to="/blogdetails">
+                    {posts.map(post => (
+                        <ListItem key={post._id}>
+                            <Link to={"/blogs/" + post._id}>
                                 <strong>
-                                    {blog.title} by {blog.author}
+                                    {post.title} by {post.author} at {post.date}
                                 </strong>
                             </Link>
+                            <DeleteBtn onClick={() => deletePost(post._id)} />
                         </ListItem>
                     ))}
                 </List>
+                ) : (
+                    <h3>No Posts to Display</h3>
+                )}
             </Col>
             </Row>
         </Container>
-    )
+    );
 }
 
 export default Blogs;
