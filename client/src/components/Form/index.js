@@ -1,5 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import Button from 'react-bootstrap/Button';
 
 // This file exports the Input, TextArea, and FormBtn components
