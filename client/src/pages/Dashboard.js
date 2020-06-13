@@ -82,7 +82,12 @@ function Dashboard() {
                         {dailyWeather.length ? (
                             <WeekContainer>
                                 <div className="row">
-                                    <h1 id="forecast">5 Day Forecast</h1>
+                                    <div className="col-4">
+                                        <h1 id="forecast">5 Day Forecast</h1>
+                                    </div>
+                                    <div className="col-4">
+                                        <h1 id="hardiness">Hardiness Zone: 10a</h1>
+                                    </div>
                                 </div>
                                 <div className="row">
                                     {dailyWeather.map(day => (

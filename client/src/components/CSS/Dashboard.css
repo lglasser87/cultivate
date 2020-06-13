@@ -19,12 +19,18 @@
 
 } */
 
-#card-day, #card-date, #card-temp, #card-description, #blog-link {
+#hardiness, #card-day, #card-date, #card-temp, #card-description, #blog-link {
     font-family: 'Comfortaa', cursive;
 }
 
-#card-day, #card-date, #card-description, #blog-link {
+#hardiness, #card-day, #card-date, #card-description, #blog-link {
     color: black;
+}
+
+#hardiness {
+    font-size:25px;
+    padding:10px;
+    margin:10px
 }
 
 #card-day {
