@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Container, Row, Col } from "../components/Grid"
+import { Container } from "../components/Grid"
 import Jumbotron from "../components/Jumbotron"
 import { List, ListItem} from "../components/List";
+
+import "../components/CSS/Favorites.css";
 
 function Favorites() {
     const plants = [
@@ -29,12 +31,12 @@ function Favorites() {
     return (
         <Container fluid>
             <Jumbotron>
-                <h1>My Favorites</h1>
+                <h1 id="my-favs">My Favorites</h1>
             </Jumbotron>
             <List>
             {plants.map(plant => (
                 <ListItem key={plant.id}>
-                    <Link to="/plantdetails">  
+                    <Link to="/plantdetails" id="plant-details-link">  
                     <strong>
                         {plant.name}
                     </strong>

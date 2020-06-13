@@ -5,6 +5,8 @@ import { Col, Row, Container } from "../components/Grid"
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API"
 
+import "../components/CSS/PlantDetails.css";
+
 function PlantDetails(props) {
     const [plant, setPlant] = useState({})
 
@@ -22,7 +24,7 @@ function PlantDetails(props) {
             <Row>
                 <Col size="md-12">
                    <Jumbotron>
-                       <h1>
+                       <h1 id="plant-name">
                            {plant.name}
                        </h1>
                    </Jumbotron>
@@ -31,22 +33,22 @@ function PlantDetails(props) {
             <Row>
                 <Col size="md-10 md-offset-1">
                    <article>
-                       <h1>Description</h1>
+                       <h1 id="plant-description">Description</h1>
                        <p>
                            {plant.description}
                        </p>
                        <br />
-                       <h1>Best Season</h1>
+                       <h1 id="best-season">Best Season</h1>
                        <p>
                            {plant.season}
                        </p>
                        <br />
-                       <h1>Getting Started</h1>
+                       <h1 id="getting-started">Getting Started</h1>
                        <p>
                            {plant.gettingStarted}
                        </p>
                        <br />
-                       <h1>How to Maintain your Plant</h1>
+                       <h1 id="maintenance">How to Maintain your Plant</h1>
                        <p>
                            {plant.howToMaintain}
                        </p>

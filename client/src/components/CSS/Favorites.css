@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
-#blog-title-and-author {
+#my-favs {
     font-family: 'Pacifico', cursive;
-    font-size: 20px;
-    padding: 10x;
-    margin:10px;
-    color:green
+    color: #7da27e;
 }
 
-#blog-date, #my-thoughts, #blog-text, #back-to-blogs {
+#plant-details-link {
     font-family: 'Comfortaa', cursive;
-    font-size: 20px;
-    padding: 10px;
-    margin:10px;
-    color: black
+    color:black;
 }

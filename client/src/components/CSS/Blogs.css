@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-#my-blogs, #latest, #no-posts {
-    font-family: 'Comfortaa', cursive;
-    padding: 10px;
-    margin:10px;
+#my-blogs, #latest {
+    font-family: 'Pacifico', cursive;
+    padding: 5px;
+    margin:5px;
 }
 
 #my-blogs {
     font-size: 50px;
-}
-
-#latest, #no-posts {
-    font-size: 30px;
+    color:green
 }
 
 #latest {
@@ -21,6 +19,7 @@
 }
 
 #no-posts, #blog {
+    font-family: 'Comfortaa', cursive;
     font-size: 20px;
     color: black
 }

@@ -1,39 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
-#forecast {
-    font-family: 'Comfortaa', cursive;
-    font-size: 100px;
+#my-dash {
+    font-family: 'Pacifico', cursive;
+    color: #7da27e;
+}
+
+#forecast, #card-day, #latest-blog-posts {
+    font-family: 'Pacifico', cursive;
+    color:black;
+}
+
+#forecast, #latest-blog-posts {
     padding: 10x;
     margin:10px; 
 }
 
-#no-weather {
-    font-family: 'Pacifico', cursive;
-    color: green
+#forecast {
+    font-size: 100px;
 }
 
-/* .weather {
+#card-day {
+    font-size:30px;
+}
+
+/* .card {
 
 } */
 
-/* #weather {
-    list-style-type: none
-} */
-
-/* #weather-date {
+/* #card-icon {
 
 } */
 
-/* #weather-type {
+#card-time, #card-temp, #card-description, #blog-link {
+    font-family: 'Comfortaa', cursive;
+    color: black;
+}
 
-} */
+#card-time, #card-temp, #blog-link {
+    font-size: 20px;
+}
 
-/* #weather-temp {
+#card-description {
+    font-size: 10px;
+}
 
-} */
+#no-weather {
+    font-family: 'Comfortaa', cursive;
+    font-size:40px;
+}
 
-/* #weather-date {
+#latest-blog-posts {
+    font-size: 40px;
+}
 
-} */
+
 

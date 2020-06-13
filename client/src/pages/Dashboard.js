@@ -57,47 +57,51 @@ function Dashboard() {
     return (
         <Container>
             <Row>
-                <Jumbotron>
-                    <h1 id="forecast">5-Day Forecast</h1>
+                <Jumbotron fluid>
+                    <h1 id="my-dash">My Dashboard</h1>
                 </Jumbotron>
             </Row>
-            <Col size="sm-6">
-                {dailyWeather.length ? (
-                    <WeekContainer>
-                        {dailyWeather.map(day => (
-                            <DayCard>
-                                <div className="col-sm-2">
-                                    <div className="card">
-                                        <h3 className="card-title">Day</h3>
-                                        <p className="text-muted">Time</p>
-                                        <i></i>
-                                        <h2>Temp</h2>
-                                        <div className="card-body">
-                                            <p className="card-text">Weather Description</p>
+            <Row>
+                <Col size="sm-6">
+                    {dailyWeather.length ? (
+                        <WeekContainer>
+                            <h id="forecast">5-Day Forecast</h>
+                            {dailyWeather.map(day => (
+                                <DayCard>
+                                    <div className="col-sm-2">
+                                        <div className="card">
+                                            <h3 className="card-title" id="card-day">Day</h3>
+                                            <p className="text-muted" id="card-time">Time</p>
+                                            {/* <img alt="card-icon" id="card-icon"/> */}
+                                            <i></i>
+                                            <h2 id="card-temp">Temp</h2>
+                                            <div className="card-body">
+                                                <p className="card-text" id="card-description">Weather Description</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </DayCard>
-                        ))}
-                    </WeekContainer>
-                ) : (
-                    <h3 id="no-weather">No Weather To display</h3>
-                )}  
-            </Col>
-            <Col size="sm-6">
-                <h1>Latest Blog Posts</h1>
-                <List>
-                    {blogsDat.map(blog => (
-                        <ListItem key={blog.id}>
-                            <Link to="/blogdetails" id="blog-link">
-                                <strong>
-                                    {blog.title} by {blog.author}
-                                </strong>
-                            </Link>
-                        </ListItem>
-                    ))}
-                </List>
-            </Col>
+                                </DayCard>
+                            ))}
+                        </WeekContainer>
+                    ) : (
+                        <h3 id="no-weather">No Weather To display</h3>
+                    )}  
+                </Col>
+                <Col size="sm-6">
+                        <h1 id="latest-blog-posts">Latest Blog Posts</h1>
+                        <List>
+                            {blogsDat.map(blog => (
+                                <ListItem key={blog.id}>
+                                    <Link to="/blogdetails" id="blog-link">
+                                        <strong>
+                                            {blog.title} by {blog.author}
+                                        </strong>
+                                    </Link>
+                                </ListItem>
+                            ))}
+                        </List>
+                    </Col>
+            </Row>
         </Container>
     )
 }

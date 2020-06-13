@@ -17,41 +17,24 @@ function BlogDetails(props) {
             .catch(err => console.log(err));
     }, [])
 
-<<<<<<< HEAD
-import "../components/CSS/BlogDetails.css";
-
-function BlogDetails() {
-=======
->>>>>>> master
     return (
         <Container fluid>
             <Row>
                 <Col size="md-12">
-                   <Jumbotron>
-<<<<<<< HEAD
-                       <h1 id="blog-title">
-                           Blog Title Here
-=======
-                       <h1>
+                   <Jumbotron fluid>
+                       <h1 id="blog-title-and-author">
                            {post.title} by {post.author}
->>>>>>> master
                        </h1>
-                        <h2>Date: {post.date}</h2>
+                        <h2 id="blog-date">Date: {post.date}</h2>
                    </Jumbotron>
                 </Col>
             </Row>
             <Row>
                 <Col size="md-8 md-offset-1">
                    <article>
-<<<<<<< HEAD
-                       <h1 id="blog-author">Author</h1>
+                       <h1 id="my-thoughts">My Thoughts Today</h1>
                        <p id="blog-text">
-                           Blog Text
-=======
-                       <h1>My Thoughts Today</h1>
-                       <p>
                            {post.body}
->>>>>>> master
                        </p>
                    </article>
                 </Col>
