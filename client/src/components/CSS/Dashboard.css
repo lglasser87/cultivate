@@ -1,26 +1,14 @@
 @import "./GoogleFonts.css";
 
-#my-dash, #latest-blog-posts {
+#my-dash, #forecast, #latest-blog-posts {
     font-family: 'Pacifico', cursive;
     color: #7da27e;
 }
 
-#forecast, #card-day {
-    font-family: 'Pacifico', cursive;
-    color:black;
-}
-
 #forecast, #latest-blog-posts {
+    font-size: 40px;
     padding: 10x;
     margin:10px; 
-}
-
-#forecast {
-    font-size: 100px;
-}
-
-#card-day {
-    font-size:30px;
 }
 
 /* .card {
@@ -31,13 +19,24 @@
 
 } */
 
-#card-date, #card-temp, #card-description, #blog-link {
+#card-day, #card-date, #card-temp, #card-description, #blog-link {
     font-family: 'Comfortaa', cursive;
+}
+
+#card-day, #card-date, #card-description, #blog-link {
     color: black;
+}
+
+#card-day {
+    font-size:30px;
 }
 
 #card-date, #card-temp, #blog-link {
     font-size: 20px;
+}
+
+#card-temp {
+    color: #7da27e;
 }
 
 #card-description {
@@ -47,10 +46,6 @@
 #no-weather {
     font-family: 'Comfortaa', cursive;
     font-size:40px;
-}
-
-#latest-blog-posts {
-    font-size: 40px;
 }
 
 

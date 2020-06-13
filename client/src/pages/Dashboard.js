@@ -61,7 +61,7 @@ function Dashboard() {
                 <h1 id="my-dash">My Dashboard</h1>
             </Jumbotron>
             <Row>
-                <Col size="sm-6">
+                <Col size="sm-8">
                     {dailyWeather.length ? (
                         <WeekContainer>
                             <h1 id="forecast">5-Day Forecast</h1>
@@ -86,7 +86,7 @@ function Dashboard() {
                         <h3 id="no-weather">No Weather To display</h3>
                     )}  
                 </Col>
-                <Col size="sm-6">
+                <Col size="sm-4">
                     <h1 id="latest-blog-posts">Latest Blog Posts</h1>
                     <List>
                         {blogsDat.map(blog => (

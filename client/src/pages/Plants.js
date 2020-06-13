@@ -55,7 +55,9 @@ function Plants() {
                     ))}
                 </List>
             ) : (
-                <h3 id="no-plants">No Plants to Display</h3>
+                <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} id="no-plants">
+                    No Plants to Display
+                </div>
             )}
         </Container>
     );

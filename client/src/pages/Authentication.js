@@ -21,7 +21,7 @@ function Authentication() {
             <h1 style={mystyle} id="signup">Log In</h1>
         </Jumbotron>
         <Row>
-            <Col size="md-4">
+            <Col size="md-6">
                 <Form>
                     <Input
                         name="userName"

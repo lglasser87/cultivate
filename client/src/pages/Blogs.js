@@ -87,10 +87,10 @@ function Blogs() {
                         >
                             Post                
                             <FontAwesomeIcon icon={['fas', 'blog']} style={{marginLeft:'2px', paddingLeft:'2px'}}/>
-                        </FormBtn>
+                        </FormBtn>  
                     </form>
                 </Col>
-                <Col size="med-4">
+                <Col size="md-4">
                     <h1 id="latest">Latest Blog Posts</h1>
                     {posts.length ? (
                     <List>

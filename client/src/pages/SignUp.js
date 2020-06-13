@@ -19,7 +19,7 @@ function SignUp() {
             <h1 style={mystyle} id="signup">Sign Up</h1>
         </Jumbotron>
         <Row>
-            <Col size="md-12">
+            <Col size="md-6">
                 <form>    
                 <Input
                     name="userName"
