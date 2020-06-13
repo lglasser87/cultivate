@@ -30,16 +30,20 @@ function SignUp() {
                     placeholder="Password (required)"
                 />
                 <Input
+                    name="email"
+                    placeholder="email (required)"
+                />
+                </form>
+            </Col>
+            <Col size="md-6">
+                <form>
+                <Input
                     name="firstName"
                     placeholder="First Name (required)"
                 />
                 <Input
                     name="lastName"
                     placeholder="Last Name (required)"
-                />
-                <Input
-                    name="email"
-                    placeholder="email (required)"
                 />
                 <FormBtn>
                     Register

@@ -10,6 +10,7 @@ import PlantDetails from './pages/PlantDetails';
 import BlogDetails from './pages/BlogDetails';
 import Authentication from "./pages/Authentication";
 import SignUp from "./pages/SignUp";
+import Footer from "./components/Footer/index";
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           </Route>
           <Redirect to="/" />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
