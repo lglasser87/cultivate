@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Container } from "../components/Grid"
+import { Container, Row, Col } from "../components/Grid"
 import Jumbotron from "../components/Jumbotron"
 import { List, ListItem} from "../components/List";
 
@@ -33,17 +33,21 @@ function Favorites() {
             <Jumbotron>
                 <h1 id="my-favs">My Favorites</h1>
             </Jumbotron>
-            <List>
-            {plants.map(plant => (
-                <ListItem key={plant.id}>
-                    <Link to="/plantdetails" id="plant-details-link">  
-                    <strong>
-                        {plant.name}
-                    </strong>
-                    </Link>
-                </ListItem>
-            ))}
-            </List>
+            <Row>
+                <div>
+                <List>
+                    {plants.map(plant => (
+                        <ListItem key={plant.id}>
+                            <Link to="/plantdetails" id="plant-details-link">  
+                            <strong>
+                                {plant.name}
+                            </strong>
+                            </Link>
+                        </ListItem>
+                    ))}
+                </List>
+                </div>
+            </Row>
         </Container>
     )
 }

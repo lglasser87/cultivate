@@ -49,7 +49,7 @@ function SignUp() {
             </Col>
         </Row>
     </Container>
-        )
+    )
 }
 
 export default SignUp;

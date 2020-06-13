@@ -41,24 +41,28 @@ function Plants() {
             <Jumbotron>
                 <h1 id="my-plants">My Plants</h1>
             </Jumbotron>
-            {plants.length ? (
-                <List>
-                    {plants.map(plant => (
-                        <ListItem key={plant._id}>
-                            <Link to={"/plants/" + plant._id} class="plant">
-                                <strong>
-                                    {plant.name}
-                                </strong>
-                            </Link>
-                            <DeleteBtn onClick={() => deletePlant(plant._id)} />
-                        </ListItem>
-                    ))}
-                </List>
-            ) : (
-                <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} id="no-plants">
-                    No Plants to Display
+            <Row>
+                <div>
+                {plants.length ? (
+                    <List>
+                        {plants.map(plant => (
+                            <ListItem key={plant._id}>
+                                <Link to={"/plants/" + plant._id} class="plant">
+                                    <strong>
+                                        {plant.name}
+                                    </strong>
+                                </Link>
+                                <DeleteBtn onClick={() => deletePlant(plant._id)} />
+                            </ListItem>
+                        ))}
+                    </List>
+                ) : (
+                    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} id="no-plants">
+                        No Plants to Display
+                    </div>
+                )}
                 </div>
-            )}
+            </Row>
         </Container>
     );
 }
