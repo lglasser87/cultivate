@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
     // Get weather
     getWeather: function () {
-        return axios.get("http://api.openweathermap.org/data/2.5/forecast?zip=91911,us&appid=" + process.env.REACT_APP_WEATHER_API_KEY);
+        return axios.get("http://api.openweathermap.org/data/2.5/forecast?zip=91911,us&units=imperial&appid=" + process.env.REACT_APP_WEATHER_API_KEY);
     },
 
     //Blogs
