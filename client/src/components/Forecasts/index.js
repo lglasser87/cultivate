@@ -10,7 +10,6 @@ export function WeekContainer({ children }) {
 
 export function DayCard({ children }) {
     return (
-
         <div className="col-sm-12">
             {children}
         </div>
@@ -19,18 +18,18 @@ export function DayCard({ children }) {
 }
 
 export function DayCard2(props) {
-return (
-    <div className="col-sm-2">
-    <div className="card">
-        <h3 className="card-title">Day</h3>
-        <p className="text-muted">Time</p>
-        <i></i>
-        <h2>Temp</h2>
-        <div className="card-body">
-            <p className="card-text">Weather Description</p>
+    return (
+        <div className="col-sm-2">
+        <div className="card">
+            <h3 className="card-title">Day</h3>
+            <p className="text-muted">Time</p>
+            <i></i>
+            <h2>Temp</h2>
+            <div className="card-body">
+                <p className="card-text">Weather Description</p>
+            </div>
         </div>
-    </div>
-    </div>
-)
+        </div>
+    )
 }
 
