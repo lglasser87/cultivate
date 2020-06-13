@@ -2,6 +2,7 @@ import React from "react";
 
 import { Container, Row, Col } from "../components/Grid";
 import { Input, FormBtn} from "../components/Form";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Jumbotron from "../components/Jumbotron";
 
 import "../components/CSS/GoogleFonts.css";
@@ -42,6 +43,7 @@ function SignUp() {
                 />
                 <FormBtn>
                     Register
+                    <FontAwesomeIcon icon={['fas', 'user-plus']} />
                 </FormBtn>
                 </form>
             </Col>

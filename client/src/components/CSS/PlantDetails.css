@@ -1,21 +1,23 @@
 @import "./GoogleFonts.css";
-
-#plant-name {
-    font-family: 'Pacifico', cursive;
+#plant-name, .plant-subtitle, #back-to-plants-list {
     color: #7da27e;
 }
 
-.plant-subtitle, #plant-description, #plant-season ,#getting-started, #maintenance, #back-to-plants-list {
-    font-family: 'Comfortaa', cursive;
-    color:black;
-}
-
-#plant-description, #plant-season ,#getting-started, #maintenance, #back-to-plants-list {
-    font-size: 10px;
+#plant-name, .plant-subtitle {
+    font-family: 'Pacifico', cursive;
 }
 
 .plant-subtitle {
     font-size: 20px;
+}
+
+#plant-description, #plant-season ,#getting-started, #maintenance, #back-to-plants-list {
+    font-family: 'Comfortaa', cursive;
+}
+
+#plant-description, #plant-season ,#getting-started, #maintenance {
+    font-size: 10px;
+    color:black;
 }
 
 #back-to-plants-list {

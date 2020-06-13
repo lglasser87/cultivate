@@ -1,11 +1,11 @@
 @import "./GoogleFonts.css";
 
-#my-dash {
+#my-dash, #latest-blog-posts {
     font-family: 'Pacifico', cursive;
     color: #7da27e;
 }
 
-#forecast, #card-day, #latest-blog-posts {
+#forecast, #card-day {
     font-family: 'Pacifico', cursive;
     color:black;
 }

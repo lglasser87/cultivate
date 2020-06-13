@@ -2,6 +2,7 @@ import React from "react";
 
 import { Container, Row, Col } from "../components/Grid";
 import { Form, Input, FormBtn} from "../components/Form";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Jumbotron from "../components/Jumbotron";
 // import { FormEl, Input, FormBtn} from "../components/Form"; if using Bootstrap form
 
@@ -32,6 +33,7 @@ function Authentication() {
                     />
                     <FormBtn>
                         Login
+                        <FontAwesomeIcon icon={['fas', 'sign-in-alt']} />
                     </FormBtn>
                 </Form>
             </Col>

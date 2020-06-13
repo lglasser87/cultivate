@@ -5,6 +5,8 @@ import { Col, Row, Container } from "../components/Grid"
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API"
 
+import "../components/CSS/BlogDetails.css";
+
 function BlogDetails(props) {
     const[post, setPost] = useState([])
 

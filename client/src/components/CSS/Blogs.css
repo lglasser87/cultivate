@@ -7,14 +7,13 @@
 }
 
 #my-blogs {
-    font-size: 50px;
-    color:green
+    color: #7da27e;
 }
 
 #latest {
     font-size: 30px;
     font-weight: bold;
-    color: green
+    color: #7da27e;
 }
 
 #no-posts, #blog {

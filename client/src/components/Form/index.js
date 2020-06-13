@@ -1,7 +1,6 @@
 import React from "react";
 
 import Grid from "@material-ui/core/Grid";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "./style.css";
 
@@ -32,7 +31,7 @@ export function Input(props) {
 export function TextArea(props) {
   return (
     <div className="form-group" id="text-area">
-      <textarea className="form-control" rows="20" {...props}/>
+      <textarea className="form-control" rows="10" {...props}/>
     </div>
   );
 }
@@ -41,7 +40,6 @@ export function FormBtn(props) {
   return (
     <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success" id="form-btn">
       {props.children}
-      <FontAwesomeIcon icon={['fas', 'sign-in-alt']} />
     </button>
   );
 }
