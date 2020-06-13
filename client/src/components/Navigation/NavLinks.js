@@ -8,7 +8,7 @@ class NavLinks extends Component {
     render() {
         return (    
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="/" id="navbar-brand">Cultivate <img src={require('../Images/cultivate.png')} alt="logo"/></Navbar.Brand>
+                <Navbar.Brand href="/" id="navbar-brand">Cultivate <img src={require('../../Images/cultivate.png')} alt="logo"/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

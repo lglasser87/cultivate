@@ -62,43 +62,47 @@ function Dashboard() {
             </Jumbotron>
             <Row>
                 <Col size="sm-8">
-                    {dailyWeather.length ? (
-                        <WeekContainer>
-                            <h1 id="forecast">5-Day Forecast</h1>
-                            {dailyWeather.map(day => (
-                                <DayCard key={day._id}>
-                                    <div className="col-sm-2">
-                                        <div className="card">
-                                            <h3 className="card-title" id="card-day">{day.name}</h3>
-                                            <p className="text-muted" id="card-date">{day.date}</p>
-                                            {/* <img alt="card-icon" id="card-icon"/> */}
-                                            <i></i>
-                                            <h2 id="card-temp">{day.temperature}</h2>
-                                            <div className="card-body">
-                                                <p className="card-text" id="card-description">{day.description}</p>
+                    <div>
+                        {dailyWeather.length ? (
+                            <WeekContainer>
+                                <h1 id="forecast">5-Day Forecast</h1>
+                                {dailyWeather.map(day => (
+                                    <DayCard key={day._id}>
+                                        <div className="col-sm-2">
+                                            <div className="card">
+                                                <h3 className="card-title" id="card-day">{day.name}</h3>
+                                                <p className="text-muted" id="card-date">{day.date}</p>
+                                                {/* <img alt="card-icon" id="card-icon"/> */}
+                                                <i></i>
+                                                <h2 id="card-temp">{day.temperature}</h2>
+                                                <div className="card-body">
+                                                    <p className="card-text" id="card-description">{day.description}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </DayCard>
-                            ))}
-                        </WeekContainer>
-                    ) : (
-                        <h3 id="no-weather">No Weather To display</h3>
-                    )}  
+                                    </DayCard>
+                                ))}
+                            </WeekContainer>
+                        ) : (
+                            <h3 id="no-weather">No Weather To display</h3>
+                        )}  
+                    </div>
                 </Col>
                 <Col size="sm-4">
-                    <h1 id="latest-blog-posts">Latest Blog Posts</h1>
-                    <List>
-                        {blogsDat.map(blog => (
-                            <ListItem key={blog.id}>
-                                <Link to="/blogdetails" id="blog-link">
-                                    <strong>
-                                        {blog.title} by {blog.author}
-                                    </strong>
-                                </Link>
-                            </ListItem>
-                        ))}
-                    </List>
+                    <div>
+                        <h1 id="latest-blog-posts">Latest Blog Posts</h1>
+                        <List>
+                            {blogsDat.map(blog => (
+                                <ListItem key={blog.id}>
+                                    <Link to="/blogdetails" id="blog-link">
+                                        <strong>
+                                            {blog.title} by {blog.author}
+                                        </strong>
+                                    </Link>
+                                </ListItem>
+                            ))}
+                        </List>
+                    </div>
                 </Col>
             </Row>
             {/* <Jumbotron>

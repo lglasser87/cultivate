@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Container, Row, Col } from "../components/Grid";
-import { Form, Input, FormBtn} from "../components/Form";
+import { Input, FormBtn} from "../components/Form";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Jumbotron from "../components/Jumbotron";
 // import { FormEl, Input, FormBtn} from "../components/Form"; if using Bootstrap form
@@ -14,7 +14,6 @@ const mystyle = {
 }
 
 function Authentication() {
-
     return (
     <Container fluid>
         <Jumbotron>
@@ -22,7 +21,7 @@ function Authentication() {
         </Jumbotron>
         <Row>
             <Col size="md-6">
-                <Form>
+                <form>
                     <Input
                         name="userName"
                         placeholder="User Name"
@@ -35,7 +34,7 @@ function Authentication() {
                         Login
                         <FontAwesomeIcon icon={['fas', 'sign-in-alt']} />
                     </FormBtn>
-                </Form>
+                </form>
             </Col>
         </Row>
     </Container>
