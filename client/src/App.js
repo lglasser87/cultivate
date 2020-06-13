@@ -21,25 +21,25 @@ function App() {
           <Route path="/" exact>
             <Dashboard />
           </Route>
-          <Route path="/plants">
+          <Route path="/plants" exact>
             <Plants />
           </Route>
-          <Route path="/favorites">
+          <Route path="/favorites" exact>
             <Favorites />
           </Route>
-          <Route path="/blogs">
+          <Route path="/blogs" exact>
             <Blogs />
           </Route>
-          <Route path="/plantdetails">
+          <Route path="/plants/:id" exact>
             <PlantDetails />
           </Route>
-          <Route path="/blogdetails">
+          <Route path="/blogs/:id" exact>
             <BlogDetails />
           </Route>
-          <Route path ="/login">
+          <Route path ="/login" exact>
             <Authentication />
           </Route>
-          <Route path="/signup">
+          <Route path="/signup" exact>
             <SignUp />
           </Route>
           <Redirect to="/" />
