@@ -61,6 +61,22 @@ function Dashboard() {
                 <h1 id="my-dash">My Dashboard</h1>
             </Jumbotron>
             <Row>
+                <Col size="sm-4">
+                        <div>
+                            <h1 id="latest-blog-posts">Latest Blog Posts</h1>
+                            <List>
+                                {blogsDat.map(blog => (
+                                    <ListItem key={blog.id}>
+                                        <Link to="/blogdetails" id="blog-link">
+                                            <strong>
+                                                {blog.title} by {blog.author}
+                                            </strong>
+                                        </Link>
+                                    </ListItem>
+                                ))}
+                            </List>
+                        </div>
+                    </Col>
                 <Col size="sm-8">
                     <div>
                         {dailyWeather.length ? (
@@ -86,22 +102,6 @@ function Dashboard() {
                         ) : (
                             <h3 id="no-weather">No Weather To display</h3>
                         )}  
-                    </div>
-                </Col>
-                <Col size="sm-4">
-                    <div>
-                        <h1 id="latest-blog-posts">Latest Blog Posts</h1>
-                        <List>
-                            {blogsDat.map(blog => (
-                                <ListItem key={blog.id}>
-                                    <Link to="/blogdetails" id="blog-link">
-                                        <strong>
-                                            {blog.title} by {blog.author}
-                                        </strong>
-                                    </Link>
-                                </ListItem>
-                            ))}
-                        </List>
                     </div>
                 </Col>
             </Row>

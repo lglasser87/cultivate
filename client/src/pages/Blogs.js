@@ -64,6 +64,25 @@ function Blogs() {
                 <h1 id="my-blogs">My Blogs</h1>
             </Jumbotron>
             <Row>
+                <Col size="md-4">
+                    <h1 id="latest">Latest Blog Posts</h1>
+                    {posts.length ? (
+                    <List>
+                        {posts.map(post => (
+                            <ListItem key={post._id}>
+                                <Link to={"/blogs/" + post._id} id="blog">
+                                    <strong>
+                                        {post.title} by {post.author} at {post.date}
+                                    </strong>
+                                </Link>
+                                <DeleteBtn onClick={() => deletePost(post._id)} />
+                            </ListItem>
+                        ))}
+                    </List>
+                    ) : (
+                        <h3 id="no-posts">No Posts to Display</h3>
+                    )}
+                </Col>
                 <Col size="md-8">
                     <form>
                         <Input
@@ -89,25 +108,6 @@ function Blogs() {
                             <FontAwesomeIcon icon={['fas', 'blog']} style={{marginLeft:'2px', paddingLeft:'2px'}}/>
                         </FormBtn>  
                     </form>
-                </Col>
-                <Col size="md-4">
-                    <h1 id="latest">Latest Blog Posts</h1>
-                    {posts.length ? (
-                    <List>
-                        {posts.map(post => (
-                            <ListItem key={post._id}>
-                                <Link to={"/blogs/" + post._id} id="blog">
-                                    <strong>
-                                        {post.title} by {post.author} at {post.date}
-                                    </strong>
-                                </Link>
-                                <DeleteBtn onClick={() => deletePost(post._id)} />
-                            </ListItem>
-                        ))}
-                    </List>
-                    ) : (
-                        <h3 id="no-posts">No Posts to Display</h3>
-                    )}
                 </Col>
             </Row>
         </Container>
