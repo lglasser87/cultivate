@@ -10,7 +10,7 @@ export function WeekContainer({ children }) {
 
 export function DayCard({ children }) {
     return (
-        <div className="col-sm-12">
+        <div className="col-sm-3">
             {children}
         </div>
     );
