@@ -89,20 +89,40 @@ function Dashboard() {
                     )}  
                 </Col>
                 <Col size="sm-6">
-                        <h1 id="latest-blog-posts">Latest Blog Posts</h1>
-                        <List>
-                            {blogsDat.map(blog => (
-                                <ListItem key={blog.id}>
-                                    <Link to="/blogdetails" id="blog-link">
-                                        <strong>
-                                            {blog.title} by {blog.author}
-                                        </strong>
-                                    </Link>
-                                </ListItem>
-                            ))}
-                        </List>
-                    </Col>
+                    <h1 id="latest-blog-posts">Latest Blog Posts</h1>
+                    <List>
+                        {blogsDat.map(blog => (
+                            <ListItem key={blog.id}>
+                                <Link to="/blogdetails" id="blog-link">
+                                    <strong>
+                                        {blog.title} by {blog.author}
+                                    </strong>
+                                </Link>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Col>
             </Row>
+            {/* <Jumbotron>
+                <h1>Weather Forecast</h1>
+            </Jumbotron>
+            <Col size="sm-12">
+                {dailyWeather.length ? (
+                    <WeekContainer>
+                        {dailyWeather.map(day => (
+                            <DayCard key={day._id}>
+                                <h2>{day.name}</h2>
+                                <h3>{day.date}</h3>
+                                <h3>{day.description}</h3>
+                                <h3>{day.temperature}</h3>
+                                <br />
+                            </DayCard>
+                        ))}
+                    </WeekContainer>
+                ): (
+                    <h3>No Weather to Display</h3>
+                )}
+            </Col> */}
         </Container>
     )
 }
