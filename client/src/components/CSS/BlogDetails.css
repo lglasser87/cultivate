@@ -1,0 +1,23 @@
+@import "./GoogleFonts.css";
+
+#blog-title-and-author, #my-thoughts {
+    font-family: 'Pacifico', cursive;
+    padding: 10x;
+    margin:10px;
+    color: #7da27e;
+}
+
+#blog-date, #blog-text, #back-to-blogs {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    padding: 10px;
+    margin:10px;
+}
+
+#blog-date, #blog-text {
+    color: black
+}
+
+#back-to-blogs {
+    color: #7da27e;
+}

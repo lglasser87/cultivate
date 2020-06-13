@@ -1,0 +1,19 @@
+@import "./GoogleFonts.css";
+
+#my-plants {
+    font-family: 'Pacifico', cursive;
+    color: #7da27e;
+}
+
+.plant, #no-plants {
+    font-family: 'Comfortaa', cursive;
+    color:black;
+}
+
+.plant {
+    font-size:30px;
+}
+
+#no-plants {
+    font-size:40px;
+}

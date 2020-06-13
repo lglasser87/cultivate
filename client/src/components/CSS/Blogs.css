@@ -1,0 +1,23 @@
+@import "./GoogleFonts.css";
+
+#my-blogs, #latest {
+    font-family: 'Pacifico', cursive;
+    padding: 5px;
+    margin:5px;
+}
+
+#my-blogs {
+    color: #7da27e;
+}
+
+#latest {
+    font-size: 30px;
+    font-weight: bold;
+    color: #7da27e;
+}
+
+#no-posts, #blog {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: black
+}

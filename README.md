@@ -14,7 +14,11 @@ https://cultivate-2020.herokuapp.com/
 * React
 * Node
 ## CSS Framework
-* Bootstrap
+* React Bootstrap
+* Material UI
+* Font Awesome
+* Google Fonts
+* Owfont
 ## APIs to be used
 * Weather App
 * Gardening App

@@ -1,0 +1,52 @@
+@import "./GoogleFonts.css";
+
+#my-dash, #forecast, #latest-blog-posts {
+    font-family: 'Pacifico', cursive;
+    color: #7da27e;
+}
+
+#forecast, #latest-blog-posts {
+    font-size: 40px;
+    padding: 10x;
+    margin:10px; 
+}
+
+/* .card {
+
+} */
+
+/* #card-icon {
+
+} */
+
+#card-day, #card-date, #card-temp, #card-description, #blog-link {
+    font-family: 'Comfortaa', cursive;
+}
+
+#card-day, #card-date, #card-description, #blog-link {
+    color: black;
+}
+
+#card-day {
+    font-size:30px;
+}
+
+#card-date, #card-temp, #blog-link {
+    font-size: 20px;
+}
+
+#card-temp {
+    color: #7da27e;
+}
+
+#card-description {
+    font-size: 10px;
+}
+
+#no-weather {
+    font-family: 'Comfortaa', cursive;
+    font-size:40px;
+}
+
+
+

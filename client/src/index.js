@@ -12,7 +12,8 @@ import {
     faHeart,
     faBlog,
     faSignInAlt,
-    faUserPlus 
+    faUserPlus,
+    faTrashAlt 
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -21,7 +22,8 @@ library.add(
   faHeart, //NavLinks
   faBlog, //NavLinks
   faSignInAlt, //NavLinks
-  faUserPlus //NavLinks
+  faUserPlus, //NavLinks
+  faTrashAlt //DeleteBtn
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));

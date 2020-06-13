@@ -1,8 +1,9 @@
 import React from "react";
+import "./style.css";
 
 export function List({ children }) {
     return (
-        <div>
+        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
             <ul>{ children }</ul>
         </div>
     );

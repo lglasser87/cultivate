@@ -5,6 +5,8 @@ import { Col, Row, Container } from "../components/Grid"
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API"
 
+import "../components/CSS/BlogDetails.css";
+
 function BlogDetails(props) {
     const[post, setPost] = useState([])
 
@@ -21,19 +23,19 @@ function BlogDetails(props) {
         <Container fluid>
             <Row>
                 <Col size="md-12">
-                   <Jumbotron>
-                       <h1>
+                   <Jumbotron fluid>
+                       <h1 id="blog-title-and-author">
                            {post.title} by {post.author}
                        </h1>
-                        <h2>Date: {post.date}</h2>
+                        <h2 id="blog-date">Date: {post.date}</h2>
                    </Jumbotron>
                 </Col>
             </Row>
             <Row>
-                <Col size="md-10 md-offset-1">
+                <Col size="md-8 md-offset-1">
                    <article>
-                       <h1>My Thoughts Today</h1>
-                       <p>
+                       <h1 id="my-thoughts">My Thoughts Today</h1>
+                       <p id="blog-text">
                            {post.body}
                        </p>
                    </article>
@@ -41,7 +43,7 @@ function BlogDetails(props) {
             </Row>
             <Row>
                 <Col size="md-2">
-                   <Link to="/blogs">Back to Blogs</Link>
+                   <Link to="/blogs" id="back-to-blogs">Back to Blogs</Link>
                 </Col>
             </Row>
         </Container>

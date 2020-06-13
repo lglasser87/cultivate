@@ -2,10 +2,12 @@ import React, {useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { Container, Row, Col } from "../components/Grid"
-import Jumbotron from "../components/Jumbotron"
 import { List, ListItem} from "../components/List";
+import Jumbotron from "../components/Jumbotron"
 import DeleteBtn from "../components/DeleteBtn"
 import API from "../utils/API"
+
+import "../components/CSS/Plants.css";
 
 function Plants() {
     // Setting our component's initial state
@@ -37,13 +39,13 @@ function Plants() {
     return (
         <Container fluid>
             <Jumbotron>
-                <h1>Plants List</h1>
+                <h1 id="my-plants">My Plants</h1>
             </Jumbotron>
             {plants.length ? (
                 <List>
                     {plants.map(plant => (
                         <ListItem key={plant._id}>
-                            <Link to={"/plants/" + plant._id}>
+                            <Link to={"/plants/" + plant._id} class="plant">
                                 <strong>
                                     {plant.name}
                                 </strong>
@@ -53,7 +55,9 @@ function Plants() {
                     ))}
                 </List>
             ) : (
-                <h3>No Plants to Display</h3>
+                <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} id="no-plants">
+                    No Plants to Display
+                </div>
             )}
         </Container>
     );

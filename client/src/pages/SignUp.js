@@ -1,13 +1,25 @@
 import React from "react";
 
 import { Container, Row, Col } from "../components/Grid";
-import { Input, TextArea, FormBtn} from "../components/Form";
+import { Input, FormBtn} from "../components/Form";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Jumbotron from "../components/Jumbotron";
+
+import "../components/CSS/GoogleFonts.css";
+
+const mystyle = {
+    fontFamily: 'Pacifico',
+    color: '#7da27e'
+}
 
 function SignUp() {
     return (
     <Container fluid>
+        <Jumbotron>
+            <h1 style={mystyle} id="signup">Sign Up</h1>
+        </Jumbotron>
         <Row>
-            <Col size="md-12">
+            <Col size="md-6">
                 <form>    
                 <Input
                     name="userName"
@@ -31,6 +43,7 @@ function SignUp() {
                 />
                 <FormBtn>
                     Register
+                    <FontAwesomeIcon icon={['fas', 'user-plus']} />
                 </FormBtn>
                 </form>
             </Col>

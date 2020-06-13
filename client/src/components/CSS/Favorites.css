@@ -1,0 +1,11 @@
+@import "./GoogleFonts.css";
+
+#my-favs {
+    font-family: 'Pacifico', cursive;
+    color: #7da27e;
+}
+
+#plant-details-link {
+    font-family: 'Comfortaa', cursive;
+    color:black;
+}

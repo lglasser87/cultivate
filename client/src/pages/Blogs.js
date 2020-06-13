@@ -6,7 +6,10 @@ import DeleteBtn from "../components/DeleteBtn"
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import API from "../utils/API";
+
+import "../components/CSS/Blogs.css";
 
 function Blogs() {
     const [posts, setPosts] = useState([])
@@ -57,11 +60,11 @@ function Blogs() {
 
     return (
         <Container fluid>
+            <Jumbotron>
+                <h1 id="my-blogs">My Blogs</h1>
+            </Jumbotron>
             <Row>
-                <Col size="md-12">
-                    <Jumbotron>
-                        <h1>My Blogs</h1>
-                    </Jumbotron>
+                <Col size="md-8">
                     <form>
                         <Input
                             onChange={handleInputChange} 
@@ -82,31 +85,30 @@ function Blogs() {
                             disabled={!(formObject.author && formObject.title)}
                             onClick={handleFormSubmit}
                         >
-                            Post
-                        </FormBtn>
+                            Post                
+                            <FontAwesomeIcon icon={['fas', 'blog']} style={{marginLeft:'2px', paddingLeft:'2px'}}/>
+                        </FormBtn>  
                     </form>
                 </Col>
-            </Row>
-            <Row>
-            <Col size="med-12">
-                <h1>Latest Blog Posts</h1>
-                {posts.length ? (
-                <List>
-                    {posts.map(post => (
-                        <ListItem key={post._id}>
-                            <Link to={"/blogs/" + post._id}>
-                                <strong>
-                                    {post.title} by {post.author} at {post.date}
-                                </strong>
-                            </Link>
-                            <DeleteBtn onClick={() => deletePost(post._id)} />
-                        </ListItem>
-                    ))}
-                </List>
-                ) : (
-                    <h3>No Posts to Display</h3>
-                )}
-            </Col>
+                <Col size="md-4">
+                    <h1 id="latest">Latest Blog Posts</h1>
+                    {posts.length ? (
+                    <List>
+                        {posts.map(post => (
+                            <ListItem key={post._id}>
+                                <Link to={"/blogs/" + post._id} id="blog">
+                                    <strong>
+                                        {post.title} by {post.author} at {post.date}
+                                    </strong>
+                                </Link>
+                                <DeleteBtn onClick={() => deletePost(post._id)} />
+                            </ListItem>
+                        ))}
+                    </List>
+                    ) : (
+                        <h3 id="no-posts">No Posts to Display</h3>
+                    )}
+                </Col>
             </Row>
         </Container>
     );
