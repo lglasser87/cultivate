@@ -43,7 +43,7 @@ function Plants() {
                 <List>
                     {plants.map(plant => (
                         <ListItem key={plant._id}>
-                            <Link to={"/plantdetails" + plant._id}>
+                            <Link to={"/plants/" + plant._id}>
                                 <strong>
                                     {plant.name}
                                 </strong>

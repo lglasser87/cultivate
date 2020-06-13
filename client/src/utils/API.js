@@ -26,18 +26,18 @@ export default {
 
     //Plants
     getPlants: function () {
-        return axios.get("/api/blogs");
+        return axios.get("/api/plants");
     },
     // Gets the post with the given id
     getPlant: function (id) {
-        return axios.get("/api/blogs/" + id);
+        return axios.get("/api/plants/" + id);
     },
     // Deletes the post with the given id
     deletePlant: function (id) {
-        return axios.delete("/api/blogs/" + id);
+        return axios.delete("/api/plants/" + id);
     },
     // Saves a post to the database
-    savePlant: function (postData) {
-        return axios.post("/api/blogs", postData);
+    savePlant: function (plantData) {
+        return axios.post("/api/plants", plantData);
     }
 }
