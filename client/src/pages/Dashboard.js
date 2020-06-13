@@ -1,33 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron"
-import { List, ListItem } from "../components/List"
+import Jumbotron from "../components/Jumbotron";
+import { List, ListItem } from "../components/List";
+import { WeekContainer, DayCard } from "../components/Forecasts";
+import moment from "moment";
 
 function Dashboard() {
-    const weatherDat = [
-        {
-            id: "TW1",
-            type: "Sunny",
-            temperature: "72 F",
-            date: "Monday"
-        },
-        {
-            id: "TW2",
-            type: "Sunny",
-            temperature: "72 F",
-            date: "Tuesday"
-        },
-        {
-            id: "TW3",
-            type: "Sunny",
-            temperature: "72 F",
-            date: "Wed"
-        }
-    ]
-
     const blogsDat = [
         {
             id: "TB1",
@@ -52,14 +33,21 @@ function Dashboard() {
         }
     ]
 
+    const [dailyWeather, setDailyWeather] = useState([])
+
     useEffect(() => {
         loadWeather();
     }, []);
 
     function loadWeather() {
         API.getWeather()
-            .then(res =>
-                    console.log(res)
+            .then(res => {
+                // const dailyData = res.data.list.dt_txt.filter(date => {
+                //     date.includes("18:00:00")
+                // }); 
+                console.log(dailyWeather)
+                setDailyWeather(res.data);
+            }
             )
             .catch(err => console.log(err));
     };
@@ -74,17 +62,27 @@ function Dashboard() {
                 </Jumbotron>
             </Row>
             <Col size="sm-6">
-                <List>
-                    {weatherDat.map(day => (
-                        <ListItem key={day.id}>
-                            <strong>
-                                {day.date}
-                                {day.type}
-                                {day.temperature}
-                            </strong>
-                        </ListItem>
-                    ))}
-                </List>
+                {dailyWeather.length ? (
+                    <WeekContainer>
+                        {dailyWeather.map(day => (
+                            <DayCard>
+                                <div className="col-sm-2">
+                                    <div className="card">
+                                        <h3 className="card-title">Day</h3>
+                                        <p className="text-muted">Time</p>
+                                        <i></i>
+                                        <h2>Temp</h2>
+                                        <div className="card-body">
+                                            <p className="card-text">Weather Description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </DayCard>
+                        ))}
+                    </WeekContainer>
+                ) : (
+                    <h3>No Weather To display</h3>
+                )}  
             </Col>
             <Col size="sm-6">
                 <h1>Latest Blog Posts</h1>
