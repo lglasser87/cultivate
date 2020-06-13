@@ -57,11 +57,9 @@ function Dashboard() {
 
     return (
         <Container fluid>
-            <Row>
-                <Jumbotron>
-                    <h1 id="my-dash">My Dashboard</h1>
-                </Jumbotron>
-            </Row>
+            <Jumbotron>
+                <h1 id="my-dash">My Dashboard</h1>
+            </Jumbotron>
             <Row>
                 <Col size="sm-6">
                     {dailyWeather.length ? (

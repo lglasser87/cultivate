@@ -59,11 +59,11 @@ function Blogs() {
 
     return (
         <Container fluid>
+            <Jumbotron>
+                <h1 id="my-blogs">My Blogs</h1>
+            </Jumbotron>
             <Row>
                 <Col size="md-8">
-                    <Jumbotron>
-                        <h1 id="my-blogs">My Blogs</h1>
-                    </Jumbotron>
                     <form>
                         <Input
                             onChange={handleInputChange} 
