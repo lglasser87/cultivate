@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Container, Row, Col } from "../components/Grid";
-import { Input, TextArea, FormBtn} from "../components/Form";
+import { Input, FormBtn} from "../components/Form";
 
 function SignUp() {
     return (

@@ -1,8 +1,13 @@
 import axios from "axios";
 
 export default {
-    // Get weather
+    // Get weather from seeded database
     getWeather: function () {
+        return axios.get("/api/dashboard");
+    },
+
+    // Get weather from Open Weather API
+    getWeatherAPI: function () {
         return axios.get("http://api.openweathermap.org/data/2.5/forecast?zip=91911,us&units=imperial&appid=" + process.env.REACT_APP_WEATHER_API_KEY);
     },
 

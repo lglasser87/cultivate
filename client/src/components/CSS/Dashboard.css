@@ -32,12 +32,12 @@
 
 } */
 
-#card-time, #card-temp, #card-description, #blog-link {
+#card-date, #card-temp, #card-description, #blog-link {
     font-family: 'Comfortaa', cursive;
     color: black;
 }
 
-#card-time, #card-temp, #blog-link {
+#card-date, #card-temp, #blog-link {
     font-size: 20px;
 }
 

@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
-import { List, ListItem } from "../components/List";
 import { WeekContainer, DayCard } from "../components/Forecasts";
+import { List, ListItem } from "../components/List";
 // import moment from "moment";
 
 import "../components/CSS/Dashboard.css";
 
 function Dashboard() {
+    const [dailyWeather, setDailyWeather] = useState([]);
+    // let [responseObj, setResponseObj] = useState({});
+
     const blogsDat = [
         {
             id: "TB1",
@@ -35,8 +38,6 @@ function Dashboard() {
         }
     ]
 
-    const [dailyWeather, setDailyWeather] = useState([])
-
     useEffect(() => {
         loadWeather();
     }, []);
@@ -44,20 +45,20 @@ function Dashboard() {
     function loadWeather() {
         API.getWeather()
             .then(res => {
-                // const dailyData = res.data.list.dt_txt.filter(date => {
-                //     date.includes("18:00:00")
-                // }); 
-                console.log(dailyWeather)
+                console.log(dailyWeather);
                 setDailyWeather(res.data);
+                
             }
             )
             .catch(err => console.log(err));
     };
 
+
+
     return (
-        <Container>
+        <Container fluid>
             <Row>
-                <Jumbotron fluid>
+                <Jumbotron>
                     <h1 id="my-dash">My Dashboard</h1>
                 </Jumbotron>
             </Row>
@@ -65,18 +66,18 @@ function Dashboard() {
                 <Col size="sm-6">
                     {dailyWeather.length ? (
                         <WeekContainer>
-                            <h id="forecast">5-Day Forecast</h>
+                            <h1 id="forecast">5-Day Forecast</h1>
                             {dailyWeather.map(day => (
-                                <DayCard>
+                                <DayCard key={day._id}>
                                     <div className="col-sm-2">
                                         <div className="card">
-                                            <h3 className="card-title" id="card-day">Day</h3>
-                                            <p className="text-muted" id="card-time">Time</p>
+                                            <h3 className="card-title" id="card-day">{day.name}</h3>
+                                            <p className="text-muted" id="card-date">{day.date}</p>
                                             {/* <img alt="card-icon" id="card-icon"/> */}
                                             <i></i>
-                                            <h2 id="card-temp">Temp</h2>
+                                            <h2 id="card-temp">{day.temperature}</h2>
                                             <div className="card-body">
-                                                <p className="card-text" id="card-description">Weather Description</p>
+                                                <p className="card-text" id="card-description">{day.description}</p>
                                             </div>
                                         </div>
                                     </div>

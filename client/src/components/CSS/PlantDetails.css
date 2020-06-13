@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
-#my-favs {
+#plant-name {
     font-family: 'Pacifico', cursive;
     color: #7da27e;
 }
 
-#plant-details-link {
+.plant-subtitle, #plant-description, #plant-season ,#getting-started, #maintenance, #back-to-plants-list {
     font-family: 'Comfortaa', cursive;
     color:black;
+}
+
+#plant-description, #plant-season ,#getting-started, #maintenance, #back-to-plants-list {
+    font-size: 10px;
+}
+
+.plant-subtitle {
+    font-size: 20px;
+}
+
+#back-to-plants-list {
+    font-size: 20px;
+    padding: 10px;
+    margin:10px;
 }

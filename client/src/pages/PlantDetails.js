@@ -33,23 +33,23 @@ function PlantDetails(props) {
             <Row>
                 <Col size="md-10 md-offset-1">
                    <article>
-                       <h1 id="plant-description">Description</h1>
+                       <h1 class="plant-subtitle" id="plant-description">Description</h1>
                        <p>
                            {plant.description}
                        </p>
                        <br />
-                       <h1 id="best-season">Best Season</h1>
-                       <p>
+                       <h1 class="plant-subtitle">Best Season</h1>
+                       <p id="plant-season">
                            {plant.season}
                        </p>
                        <br />
-                       <h1 id="getting-started">Getting Started</h1>
-                       <p>
+                       <h1 class="plant-subtitle">Getting Started</h1>
+                       <p id="getting-started">
                            {plant.gettingStarted}
                        </p>
                        <br />
-                       <h1 id="maintenance">How to Maintain your Plant</h1>
-                       <p>
+                       <h1 class="plant-subtitle">How to Maintain your Plant</h1>
+                       <p id="maintenance">
                            {plant.howToMaintain}
                        </p>
                    </article>
@@ -57,7 +57,7 @@ function PlantDetails(props) {
             </Row>
             <Row>
                 <Col size="md-2">
-                   <Link to="/plants">Back to Plants List</Link>
+                   <Link to="/plants" id="back-to-plants-list">Back to My Plants List</Link>
                 </Col>
             </Row>
         </Container>
