@@ -6,7 +6,7 @@
     font-size: 20px;
     padding: 10x;
     margin:10px;
-    color: black
+    color:green
 }
 
 #blog-author, #blog-text, #back-to-blogs {
@@ -14,4 +14,5 @@
     font-size: 20px;
     padding: 10px;
     margin:10px;
+    color: black
 }
