@@ -8,6 +8,8 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
 
+import "../components/CSS/Blogs.css";
+
 function Blogs() {
     const [posts, setPosts] = useState([])
     const [formObject, setFormObject] = useState({})
@@ -58,9 +60,9 @@ function Blogs() {
     return (
         <Container fluid>
             <Row>
-                <Col size="md-12">
+                <Col size="md-8">
                     <Jumbotron>
-                        <h1>My Blogs</h1>
+                        <h1 id="my-blogs">My Blogs</h1>
                     </Jumbotron>
                     <form>
                         <Input
@@ -88,8 +90,8 @@ function Blogs() {
                 </Col>
             </Row>
             <Row>
-            <Col size="med-12">
-                <h1>Latest Blog Posts</h1>
+            <Col size="med-8">
+                <h1 id="latest">Latest Blog Posts</h1>
                 {posts.length ? (
                 <List>
                     {posts.map(post => (
@@ -104,7 +106,7 @@ function Blogs() {
                     ))}
                 </List>
                 ) : (
-                    <h3>No Posts to Display</h3>
+                    <h3 id="no-posts">No Posts to Display</h3>
                 )}
             </Col>
             </Row>

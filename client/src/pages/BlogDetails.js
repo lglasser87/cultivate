@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid"
 import Jumbotron from "../components/Jumbotron";
 
+import "../components/CSS/BlogDetails.css";
+
 function BlogDetails() {
     return (
         <Container fluid>
@@ -17,7 +19,7 @@ function BlogDetails() {
                 </Col>
             </Row>
             <Row>
-                <Col size="md-10 md-offset-1">
+                <Col size="md-8 md-offset-1">
                    <article>
                        <h1>Author</h1>
                        <p>

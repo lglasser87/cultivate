@@ -1,6 +1,8 @@
 import React from "react";
+
 import Grid from "@material-ui/core/Grid";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import "./style.css";
 
 // This file exports the Form, Input, TextArea, and FormBtn components
