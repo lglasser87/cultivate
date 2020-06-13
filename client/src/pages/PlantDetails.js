@@ -31,10 +31,10 @@ function PlantDetails(props) {
                 </Col>
             </Row>
             <Row>
-                <Col size="md-10 md-offset-1">
+                <Col size="md-4 md-offset-1">
                    <article>
-                       <h1 class="plant-subtitle" id="plant-description">Description</h1>
-                       <p>
+                       <h1 class="plant-subtitle" >Description</h1>
+                       <p id="plant-description">
                            {plant.description}
                        </p>
                        <br />
@@ -54,9 +54,7 @@ function PlantDetails(props) {
                        </p>
                    </article>
                 </Col>
-            </Row>
-            <Row>
-                <Col size="md-2">
+                <Col size="md-8">
                    <Link to="/plants" id="back-to-plants-list">Back to My Plants List</Link>
                 </Col>
             </Row>

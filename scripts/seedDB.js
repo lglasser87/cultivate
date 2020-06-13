@@ -8,6 +8,14 @@ mongoose.connect(
 
 const plantSeed = [
   {
+    name: "Potato",
+    description: "Boil em, mash em, stick em in a stew",
+    season: "Year-round",
+    gettingStarted: "Spuds!",
+    howToMaintain: "Rub some dirt on it.",
+    rotate: "TBD"
+  },
+  {
       name: "Fuji Apple",
       description: "Fuji apples are typically round and range from large to very large, averaging 75 mm in diameter. They contain between 9–11% sugars by weight and have a dense flesh that is sweeter and crisper than many other apple cultivars, making them popular with consumers around the world. Fuji apples also have a very long shelf life compared to other apples, even without refrigeration. With refrigeration, Fuji apples can remain fresh for up to a year.",
       season: "Year-round",
