@@ -43,6 +43,10 @@ function PlantDetails(props) {
                            {plant.season}
                        </p>
                        <br />
+                    </article>
+                    </Col>
+                    <Col size="md-4 md-offset-1">
+                    <article>
                        <h1 class="plant-subtitle">Getting Started</h1>
                        <p id="getting-started">
                            {plant.gettingStarted}
@@ -52,10 +56,8 @@ function PlantDetails(props) {
                        <p id="maintenance">
                            {plant.howToMaintain}
                        </p>
+                       <Link to="/plants" id="back-to-plants-list">Back to My Plants List</Link>
                    </article>
-                </Col>
-                <Col size="md-8">
-                   <Link to="/plants" id="back-to-plants-list">Back to My Plants List</Link>
                 </Col>
             </Row>
         </Container>
