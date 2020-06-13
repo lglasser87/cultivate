@@ -22,5 +22,22 @@ export default {
     // Saves a post to the database
     savePost: function (postData) {
         return axios.post("/api/blogs", postData);
+    },
+
+    //Plants
+    getPlants: function () {
+        return axios.get("/api/blogs");
+    },
+    // Gets the post with the given id
+    getPlant: function (id) {
+        return axios.get("/api/blogs/" + id);
+    },
+    // Deletes the post with the given id
+    deletePlant: function (id) {
+        return axios.delete("/api/blogs/" + id);
+    },
+    // Saves a post to the database
+    savePlant: function (postData) {
+        return axios.post("/api/blogs", postData);
     }
 }
