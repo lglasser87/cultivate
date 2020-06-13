@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+#forecast {
+    font-family: 'Comfortaa', cursive;
+    font-size: 100px;
+    padding: 10x;
+    margin:10px; 
+}
+
+/* .weather {
+
+} */
+
+#weather {
+    list-style-type: none
+}
+
+/* #weather-date {
+
+} */
+
+/* #weather-type {
+
+} */
+
+/* #weather-temp {
+
+} */
+
+/* #weather-date {
+
+} */
+

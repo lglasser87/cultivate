@@ -12,7 +12,7 @@ function BlogDetails() {
             <Row>
                 <Col size="md-12">
                    <Jumbotron>
-                       <h1>
+                       <h1 id="blog-title">
                            Blog Title Here
                        </h1>
                    </Jumbotron>
@@ -21,8 +21,8 @@ function BlogDetails() {
             <Row>
                 <Col size="md-8 md-offset-1">
                    <article>
-                       <h1>Author</h1>
-                       <p>
+                       <h1 id="blog-author">Author</h1>
+                       <p id="blog-text">
                            Blog Text
                        </p>
                    </article>
@@ -30,7 +30,7 @@ function BlogDetails() {
             </Row>
             <Row>
                 <Col size="md-2">
-                   <Link to="/blogs">Back to Blogs</Link>
+                   <Link to="/blogs" id="back-to-blogs">Back to Blogs</Link>
                 </Col>
             </Row>
         </Container>

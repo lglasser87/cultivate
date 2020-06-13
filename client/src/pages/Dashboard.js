@@ -6,6 +6,8 @@ import { Container, Row, Col } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron"
 import { List, ListItem } from "../components/List"
 
+import "../components/CSS/Dashboard.css";
+
 function Dashboard() {
     const weatherDat = [
         {
@@ -24,7 +26,19 @@ function Dashboard() {
             id: "TW3",
             type: "Sunny",
             temperature: "72 F",
-            date: "Wed"
+            date: "Wednesday"
+        },        
+        {
+            id: "TW4",
+            type: "Sunny",
+            temperature: "72 F",
+            date: "Thursday"
+        },
+        {
+            id: "TW5",
+            type: "Sunny",
+            temperature: "72 F",
+            date: "Friday"
         }
     ]
 
@@ -68,19 +82,26 @@ function Dashboard() {
         <Container>
             <Row>
                 <Jumbotron>
-                    <h1>Sunday</h1>
-                    <h1>Sunny</h1>
-                    <h1>72 F</h1>
+                    <h1 id="forecast">5-Day Forecast</h1>
                 </Jumbotron>
             </Row>
             <Col size="sm-6">
                 <List>
                     {weatherDat.map(day => (
-                        <ListItem key={day.id}>
+                        <ListItem key={day.id} id="weather">
                             <strong>
-                                {day.date}
-                                {day.type}
-                                {day.temperature}
+                                <div>{
+                                    day.date}
+                                </div>
+                                <div>
+                                    {day.type}
+                                    </div>
+                                <div>
+                                    {day.temperature}
+                                </div>
+                                {/* <div>
+                                    <img/>
+                                </div> */}
                             </strong>
                         </ListItem>
                     ))}
